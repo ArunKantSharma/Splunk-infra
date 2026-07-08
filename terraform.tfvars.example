@@ -1,0 +1,27 @@
+aws_region  = "us-east-2"
+aws_profile = "default"
+
+project_name = "splunk"
+
+# Required: EC2 key pair must exist in AWS before apply
+key_pair_name = "my-key-pair"
+
+# Restrict SSH and Web UI access to your IP in production
+admin_cidr = "0.0.0.0/0"
+
+# On-prem forwarder CIDR blocks for TCP 9997 ingestion
+forwarder_cidr_blocks = ["203.0.113.0/24"]
+
+instance_type            = "t3.micro"
+root_volume_size         = 30
+indexer_data_volume_size = 100
+
+# Optional Route 53 DNS (requires existing hosted zone)
+# domain_name          = "example.com"
+# splunk_web_subdomain = "splunk"
+
+tags = {
+  Environment = "production"
+  Application = "splunk"
+  ManagedBy   = "terraform"
+}
