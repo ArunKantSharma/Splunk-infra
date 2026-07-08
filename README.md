@@ -18,7 +18,7 @@ The architecture follows AWS best practices by distributing resources across **t
 
 ## Architecture
 
-![Architecture](docs/splunk-aws-architecture-3az.png)
+![Architecture](splunk-aws-architecture-3az.png)
 
 The environment contains:
 
